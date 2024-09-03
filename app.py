@@ -6,7 +6,7 @@ from bson.objectid import ObjectId
 app = Flask(__name__)
 
 # MongoDB connection string
-uri = "mongodb+srv://yogeshp:your_password@cluster0-shard-00-00.0six4.mongodb.net/myDatabase?retryWrites=true&w=majority"
+uri = "mongodb+srv://yogeshp:your_password@cluster0.xxxxx.mongodb.net/myDatabase?retryWrites=true&w=majority"
 client = MongoClient(uri, server_api=ServerApi('1'))
 
 # Database and collection
@@ -63,3 +63,4 @@ def delete_name(id):
 
 if __name__ == '__main__':
     app.run(debug=True)
+
