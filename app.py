@@ -5,10 +5,10 @@ from bson.objectid import ObjectId
 
 app = Flask(__name__)
 
-# MongoDB connection string
-uri = "mongodb+srv://yogeshp:j22nsWPUUN0uKj9L@cluster0.0six4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+# Updated MongoDB connection string
+uri = "jdbc:mongodb://atlas-sql-66d447a33e813953536500a3-0six4.a.query.mongodb.net/myDatabase?ssl=true&authSource=admin"
 client = MongoClient(uri, server_api=ServerApi('1'))
-db = client['name_database']
+db = client['myDatabase']  # Replace 'myDatabase' with your actual database name
 collection = db['names']
 
 # Display names and form
