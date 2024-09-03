@@ -5,8 +5,8 @@ from bson.objectid import ObjectId
 
 app = Flask(__name__)
 
-# Updated MongoDB connection string
-uri = "jdbc:mongodb://atlas-sql-66d447a33e813953536500a3-0six4.a.query.mongodb.net/myDatabase?ssl=true&authSource=admin"
+# Correct MongoDB connection string
+uri = "mongodb+srv://yogeshp:j22nsWPUUN0uKj9L@cluster0.0six4.mongodb.net/myDatabase?retryWrites=true&w=majority"
 client = MongoClient(uri, server_api=ServerApi('1'))
 db = client['myDatabase']  # Replace 'myDatabase' with your actual database name
 collection = db['names']
